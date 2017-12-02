@@ -1,14 +1,83 @@
 /****** Custom Classes ******/
-.class1 {
-	color: rgb(33, 96, 177);
+body {
+	background-color: black !important;
+	padding: 0px;
 }
-.class2 {
-	color: rgb(23, 66, 122);
+
+.red-glow {
+	color: rgb(219, 24, 66);
+	color: #fff;
+	text-shadow:
+	  0 0 5px #fff,
+	  0 0 10px #fff,
+	  0 0 20px #fff,
+	  0 0 40px #ff0000,
+	  0 0 80px #ff0000,
+	  0 0 90px #ff0000,
+	  0 0 100px #ff0000,
+	  0 0 150px #ff0000; 
 }
+
+.blue-glow {
+	color: #3232ff;
+	color: #fff;
+	text-shadow:
+	  0 0 5px #fff,
+	  0 0 10px #fff,
+	  0 0 20px #fff,
+	  0 0 40px #3232ff,
+	  0 0 80px #3232ff,
+	  0 0 90px #3232ff,
+	  0 0 100px #3232ff,
+	  0 0 150px #3232ff; 
+}
+
+.gold-glow {
+	color: rgb(182, 184, 62);
+	color: #fff;
+	text-shadow:
+	  0 0 5px #fff,
+	  0 0 10px #fff,
+	  0 0 20px #fff,
+	  0 0 40px rgb(182, 184, 62),
+	  0 0 80px rgb(182, 184, 62),
+	  0 0 90px rgb(182, 184, 62),
+	  0 0 100px rgb(182, 184, 62),
+	  0 0 150px rgb(182, 184, 62); 
+}
+
 .error{
 	color: red;
 	margin-top: 10px;
 }
-#list {
-	margin-top: 15px;
+
+.brief-heading, .brief-main, .mission-main {
+	text-align: center;
+}
+
+.brief-heading {
+	font-size: 60px;
+	border: 0px;
+	height: 60px;
+	margin-top: 35px;
+}
+
+.mission-details {
+	margin-top: 100px;
+}
+
+.mission-name {
+	font-size: 75px;
+}
+
+.mission-tagline {
+	font-size: 50px;
+}
+
+.mission-set {
+	background-color: white;
+}
+
+.container.mission-set {
+	padding-top: 50px;
 }

@@ -1,9 +1,9 @@
-<div class="row pagination-centered" data-ng-controller="briefCtrl">
-	<h1>Mission Briefing</h1>
-  <div class="well">
+<div class="brief-main" data-ng-controller="briefCtrl">
+  <div class="mission-details">
     <div>
-      <h2 class="mission-name">{{missionName}}</h2>
-      <h3 class="mission-tagline">{{missionTagline}}</div>
+      <h2 class="mission-name blue-glow">{{mission.name}}</h2>
+      <img src="{{mission.image}}"></img>
+      <h3 class="mission-tagline gold-glow">{{mission.tagline}}</div>
     </div>
   </div>
 </div>

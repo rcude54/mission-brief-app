@@ -12,14 +12,20 @@ var mongoose = require('mongoose'),
 var MissionSchema = new Schema({
 
   /** 
-    Name of the mission
+   * Name of the mission
   */
   name : { type: String, unique: true, required: true },
 
   /** 
-    Optional tagline associated with the mission
+   * Optional tagline associated with the mission
   */
   tagline : { type: String, required: false },
+
+  /**
+   * Optional image associated with the mission
+   * TODO: Figure out how the images will be stored and make a static path.
+   */
+  image: { type: String, required: false }
 
 });
 

@@ -1,19 +1,16 @@
 "use strict"
-app.controller('briefCtrl', [ '$scope', '$http','$location', 'growl',
-	function($scope, $http, $location,  growl){
+app.controller('briefCtrl', ['$scope', '$http','$location', 'growl', '$interval',
+	function($scope, $http, $location,  growl, $interval) {
 
 		$scope.reload = function(){
 			$http.get('/checkStatus').then(function(reply){
 				if(reply.data.status){
 					var mission = reply.data.mission;
-					setTimeout($scope.reload(), 50000);
-					$scope.missionName = mission.name;
-					$scope.missionTagline = mission.tagline;
-					return;
+					$scope.mission = mission;
 				}
-				location.reload();
 			});
 		};
-		setTimeout($scope.reload(), 50000);
+		$scope.reload();
+		$interval($scope.reload, 5000);
 	}]
 );

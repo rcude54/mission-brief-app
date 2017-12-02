@@ -31,8 +31,8 @@ exports.checkStatus = {
 
 exports.setMission = {
   handler: function(request, reply){
-    var missionName = request.payload.missionName;
-    Mission.findByName(missionName, function (err, foundMission){
+    //Using a query param for now, need to do more investigation into post data(form) in angular
+    Mission.findByName(request.query.missionName, function (err, foundMission){
       if(!err) {
           mission = foundMission;
           sameMission = false;
@@ -46,11 +46,10 @@ exports.setMission = {
 
 exports.getAll = {
   handler: function (request, reply) {
-    Mission.find({}, function (err, mission) {
-      if (!err) {
-        return reply(mission);
+    Mission.find({}, function(err, data){
+      if(!err){
+        return reply(data);
       }
-      return reply(Boom.badImplementation(err)); // 500 error
     });
   }
 };

@@ -1,0 +1,12 @@
+<div class="container mission-set" data-ng-controller="missionCtrl">
+    <div class="set-mission-form">
+		<select name="missionSelect" id="missionSelect" ng-model="selectedMission">
+			<option value="">Select Mission</option>
+			<option ng-repeat="mission in allMissions" value="{{mission.name}}">{{mission.name}}</option>
+		</select>
+		<div>
+			<div class='message'>{{messageText}}</div>				
+			<button type="button" ng-click="setMission()">Submit</button>
+		</div>
+	</div>				
+</div>
