@@ -1,6 +1,6 @@
 {
-  "name": "hard-knocks-missions",
-  "description": "Hard Knocks Mission App",
+  "name": "missions-briefing-app",
+  "description": "Mission Briefing App",
   "version": "0.0.1",
   "main": "server/server.js",
   "engines": {

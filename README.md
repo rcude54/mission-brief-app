@@ -1,7 +1,7 @@
-Hard Knocks Mission App
+Mission Briefing App
 ========================
 
-The purpose of this application is to create, store, update, and display Hard Knocks missions.
+The purpose of this application is to create, store, update, and display missions in the briefing area for the warehouse and arena.
 
 ### Install an app
 
