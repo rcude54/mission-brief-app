@@ -19,13 +19,7 @@ var MissionSchema = new Schema({
   /** 
    * Optional tagline associated with the mission
   */
-  tagline : { type: String, required: false },
-
-  /**
-   * Optional image associated with the mission
-   * TODO: Figure out how the images will be stored and make a static path.
-   */
-  image: { type: String, required: false }
+  tagline : {type: String}
 
 });
 

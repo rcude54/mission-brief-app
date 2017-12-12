@@ -4,6 +4,11 @@ body {
 	padding: 0px;
 }
 
+.navbar {
+	border-style: solid;
+    border-width: thick;
+}
+
 .red-glow {
 	color: rgb(219, 24, 66);
 	color: #fff;
@@ -46,12 +51,26 @@ body {
 	  0 0 150px rgb(182, 184, 62); 
 }
 
+.green-glow {
+	color: #39ff14;
+	color: #fff;
+	text-shadow:
+	  0 0 5px #fff,
+	  0 0 10px #fff,
+	  0 0 20px #fff,
+	  0 0 40px #39ff14,
+	  0 0 80px #39ff14,
+	  0 0 90px #39ff14,
+	  0 0 100px #39ff14,
+	  0 0 150px #39ff14; 
+}
+
 .error{
 	color: red;
 	margin-top: 10px;
 }
 
-.brief-heading, .brief-main, .mission-main {
+.brief-heading, .brief-main, .mission-main, .set-mission-title, .set-mission-form {
 	text-align: center;
 }
 
@@ -64,20 +83,28 @@ body {
 
 .mission-details {
 	margin-top: 100px;
+	padding-bottom: 50px;
 }
 
 .mission-name {
-	font-size: 75px;
+	font-size: 100px;
+	padding-bottom: 100px; 
 }
 
 .mission-tagline {
-	font-size: 50px;
-}
-
-.mission-set {
-	background-color: white;
+	font-size: 65px;
 }
 
 .container.mission-set {
 	padding-top: 50px;
+}
+
+.white-text {
+	color: white;
+}
+
+.message-text {
+	text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
+    color: white;
+    font-size: 30px;
 }
