@@ -6,11 +6,10 @@ module.exports = {
     port: 3000
   },
   database: {
-  	host: 'localhost',
-    port: 27017,
-    db: 'hard-knocks',
-    username: '',
-    password: '',
-    url : 'mongodb://<user>:<password>@<url>'
+  	host: 'ds135486.mlab.com',
+    port: 35486,
+    db: 'hard-knocks-missions',
+    username: 'hard-knocks',
+    password: 'H4rd Kn0cks'
   }
 };
