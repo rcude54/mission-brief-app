@@ -1,4 +1,5 @@
 // Load modules
+"use strict";
 
 var Mission = require('./controller/mission'),
   Static = require('./static');

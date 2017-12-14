@@ -1,6 +1,8 @@
 "use strict";
-app.controller('briefCtrl', ['$scope', '$http','$location', 'growl', '$interval',
-	function($scope, $http, $location,  growl, $interval) {
+app.controller('briefCtrl', ['$scope', '$http', '$location', 'growl', '$interval', 'briefMessage',
+	function($scope, $http, $location,  growl, $interval, briefMessage) {
+		$scope.messageHeader = briefMessage.header;
+		$scope.messageText = briefMessage.text;
 
 		$scope.reload = function(){
 			$http.get('/checkStatus').then(function(reply){
@@ -12,4 +14,4 @@ app.controller('briefCtrl', ['$scope', '$http','$location', 'growl', '$interval'
 		$scope.reload();
 		$interval($scope.reload, 5000);
 	}]
-);
+)
