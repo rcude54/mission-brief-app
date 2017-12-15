@@ -19,11 +19,16 @@ app.controller('missionCtrl', ['$scope', '$http',
 				window.alert("Successfully set mission: " + $scope.selectedMission);
 				location.reload();
 			});
-        };
-        
+		};
+
+		$scope.levelSelect = function(){
+			$http.get('/mission/level?missionLevel=' + $scope.missionLevel).success(function(data){
+				$scope.allMissions = data;
+			});
+		}
+		        
 		$http.get('/mission/all').success(function(data){
 			$scope.allMissions = data;
-			var test = 'merp';
         });
 	}]
 );

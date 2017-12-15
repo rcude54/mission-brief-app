@@ -19,7 +19,12 @@ var MissionSchema = new Schema({
   /** 
    * Optional tagline associated with the mission
   */
-  tagline : {type: String}
+  tagline : {type: String},
+
+  /**
+   * Different levels the missions falls into
+   */
+  levels: [Number]
 
 });
 
@@ -27,6 +32,10 @@ var mission = mongoose.model('mission', MissionSchema);
 
 mission.findByName = function(missionName, cb) {
   this.findOne({name: missionName}, cb);
+};
+
+mission.findByLevel = function(missionLevel, cb) {
+  this.find({levels : missionLevel}, cb);
 };
 
 /** export schema */

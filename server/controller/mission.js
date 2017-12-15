@@ -7,16 +7,6 @@ var Joi = require('joi'),
   var sameMission = true;
   var mission;
 
-function findMission(missionName) {
-    console.log(missionName);  
-    Mission.find({name: missionName}, function(err, foundMission){
-      if(!err){
-        return foundMission;
-      }
-      return err.name;
-    });
-  };
-
 
 exports.checkStatus = {
   handler: function(request, reply){
@@ -65,6 +55,26 @@ exports.getMission = {
       return reply(Boom.badImplementation(err));     
     });
   }
+};
+
+exports.getMissionByLevel = {
+  handler: function (request, reply) {
+    var missionLevel = request.url.query.missionLevel;
+    if(missionLevel === 'All'){
+      Mission.find({}, function(err, data){
+        if(!err){
+          return reply(data);
+        }
+      });
+    } else {
+      Mission.findByLevel(missionLevel, function (err, missions){
+        if(!err) {
+          return reply(missions);
+        }
+        return reply(Boom.badImplementation(err));     
+      });
+    }
+  }  
 };
 
 exports.create = {
