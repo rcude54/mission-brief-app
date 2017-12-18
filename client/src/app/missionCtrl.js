@@ -25,7 +25,7 @@ app.controller('missionCtrl', ['$scope', '$http',
 			$http.get('/mission/level?missionLevel=' + $scope.missionLevel).success(function(data){
 				$scope.allMissions = data;
 			});
-		}
+		};
 		        
 		$http.get('/mission/all').success(function(data){
 			$scope.allMissions = data;

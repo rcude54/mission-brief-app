@@ -11,5 +11,8 @@ module.exports = {
     db: 'hard-knocks-missions',
     username: 'hard-knocks',
     password: 'H4rd Kn0cks'
+  },
+  environment: {
+    name: 'House'
   }
 };

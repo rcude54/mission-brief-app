@@ -10,6 +10,10 @@ var app = angular
 					{templateUrl: 'app/brief.html'},
 					{controller: 'briefCtrl.js'}
 				)
+				.when('/config',
+					{templateUrl: 'app/config.html'},
+				{controller: 'configCtrl.js'}
+				)
 				.when('/missions',
 					{templateUrl: 'app/missions.html'},
 					{controller: 'missionCtrl.js'}
@@ -17,4 +21,4 @@ var app = angular
 				.otherwise({redirectTo: '/'});
 	});
 app.value('briefMessage', {header: 'Merp', text: 'Derp'});
-app.value('env', 'House');
+app.constant('env', 'House');

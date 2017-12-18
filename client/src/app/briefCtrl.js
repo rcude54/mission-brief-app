@@ -1,6 +1,6 @@
 "use strict";
-app.controller('briefCtrl', ['$scope', '$http', '$location', 'growl', '$interval', 'briefMessage',
-	function($scope, $http, $location,  growl, $interval, briefMessage) {
+app.controller('briefCtrl', ['$scope', '$http', '$window', 'growl', '$interval', 'briefMessage',
+	function($scope, $http, $window,  growl, $interval, briefMessage) {
 		$scope.messageHeader = briefMessage.header;
 		$scope.messageText = briefMessage.text;
 

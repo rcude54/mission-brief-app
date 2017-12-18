@@ -70,7 +70,7 @@ body {
 	margin-top: 10px;
 }
 
-.brief-heading, .brief-main, .mission-main, .set-mission-title, .set-mission-form {
+.brief-heading, .brief-main, .mission-main, .set-mission-title, .set-mission-form, .container {
 	text-align: center;
 }
 
@@ -95,7 +95,7 @@ body {
 	font-size: 65px;
 }
 
-.container.mission-set {
+.container {
 	padding-top: 50px;
 }
 
