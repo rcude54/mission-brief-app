@@ -20,5 +20,3 @@ var app = angular
 				)
 				.otherwise({redirectTo: '/'});
 	});
-app.value('briefMessage', {header: 'Merp', text: 'Derp'});
-app.constant('env', 'House');

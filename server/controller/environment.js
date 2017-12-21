@@ -18,4 +18,4 @@ exports.setEnvName = {
         }
         return reply('Could not set environment name').code(500);
     }
-}
+};

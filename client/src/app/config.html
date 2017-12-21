@@ -4,4 +4,12 @@
     <option value="House">House</option>
     <option value="Warehouse">Warehouse</option>
   </select>
+  <div class="brief-message-config">
+    <h1 class="white-text">Set Brief Message</h1>
+    <input type='text' ng-model="messageHeader"/>
+    <input type='text' ng-model="messageText"/>
+    <div>
+      <button type="button" ng-click="setMessage()">Submit</button>
+    </div>
+  </div>
   </div>
