@@ -6,6 +6,7 @@ var Joi = require('joi'),
 
   var sameMission = true;
   var mission;
+  var previousMission;
 
 
 exports.checkStatus = {
@@ -13,7 +14,7 @@ exports.checkStatus = {
     if(sameMission){
       return reply({status: sameMission, mission: mission});
     }
-    var missionReturn = {status: sameMission, mission: mission};
+    var missionReturn = {status: sameMission, mission: mission, previous: previousMission};
     sameMission = true;    
     return reply(missionReturn);
   }
@@ -24,6 +25,7 @@ exports.setMission = {
     //Using a query param for now, need to do more investigation into post data(form) in angular
     Mission.findByName(request.query.missionName, function (err, foundMission){
       if(!err) {
+          previousMission = mission;
           mission = foundMission;
           sameMission = false;
           console.log('New Mission Found: ' + foundMission.name);
@@ -133,6 +135,18 @@ exports.remove = {
         return reply(Boom.notFound());
       }
       return reply(Boom.badRequest("Could not delete mission :("));
+    });
+  }
+};
+
+exports.getPlaylist = {
+  handler: function(request, reply) {
+    var levelPlaylist = request.payload.playlist;
+    Mission.find({level: levelPlaylist}, function(err, data){
+      if(!err){
+        return reply(data);
+      }
+      return reply(Boom.badRequest('Could not find playlist:('));
     });
   }
 };

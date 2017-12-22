@@ -11,10 +11,15 @@ app.controller('briefCtrl', ['$scope', '$http', '$interval',
 		});
 
 		$scope.reload = function(){
-			$http.get('/checkStatus').then(function(reply){
-				if(!reply.data.status){
-					$scope.mission = reply.data.mission;
+			$http.get('/checkStatus').then(function(missionReply){
+				var missionData = missionReply.data;
+				if(!missionData.status){
+					$scope.mission = missionData.mission;
 					$http.get('/briefMessages?env=' + envName).success(function(reply){
+						var missionResult = reply[1];
+						if(missionResult.text && missionData.previous){
+							$scope.missionResult = 'Team ' + missionResult.text + ' won ' + missionData.previous.name + ' mission!!!';
+						}
 						var message = reply[0];
 						$scope.messageHeader = message.header;
 						$scope.messageText = message.text;

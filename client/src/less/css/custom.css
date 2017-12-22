@@ -65,6 +65,20 @@ body {
 	  0 0 150px #39ff14; 
 }
 
+.purple-glow {
+	color: #d810eb;
+	color: #fff;
+	text-shadow:
+	  0 0 5px #fff,
+	  0 0 10px #fff,
+	  0 0 20px #fff,
+	  0 0 40px #d810eb,
+	  0 0 80px #d810eb,
+	  0 0 90px #d810eb,
+	  0 0 100px #d810eb,
+	  0 0 150px #d810eb; 
+}
+
 .error{
 	color: red;
 	margin-top: 10px;
@@ -101,6 +115,11 @@ body {
 
 .white-text {
 	color: white;
+}
+
+.result-text{
+	font-size: 50px;
+	padding-bottom: 50px;
 }
 
 .message-text {

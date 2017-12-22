@@ -14,7 +14,28 @@
 			<option ng-repeat="mission in allMissions" value="{{mission.name}}">{{mission.name}}</option>
 		</select>
 		<div>
-			<button type="button" ng-click="setMission()">Submit</button>
 		</div>
-	</div>				
+	</div>
+	<div class="mission-message">
+		<h1 class="white-text">Set Winning Team Message</h1>
+		<select name="teamSelect" id="teamSelect" ng-model="messageText">
+			<option disabled selected value="">Select Winning Team</option>
+			<option value="Tan">Tan</option>
+			<option value="Camo">Camo</option>
+			<option value="Draw">Draw</option>
+			<option value="Zombies">Zombies</option>
+			<option value"Aliens">Aliens</option>
+			<option value="Humans">Humans</option>
+			<option value"Red">Red</option>
+			<option value="Blue">Blue</option>
+			<option value"Green">Green</option>
+			<option value="Purple">Purple</option>
+			<option value"Pink">Pink</option>
+			<option value="Olive">Blue</option>
+			<option value"Traitor">Traitor</option>
+		</select>
+		<div>
+		  <button type="button" ng-click="setMission()">Submit</button>
+		</div>
+	  </div>				
 </div>
