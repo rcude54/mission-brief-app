@@ -16,13 +16,16 @@ app.controller('briefCtrl', ['$scope', '$http', '$interval',
 				if(!missionData.status){
 					$scope.mission = missionData.mission;
 					$http.get('/briefMessages?env=' + envName).success(function(reply){
-						var missionResult = reply[1];
-						if(missionResult.text && missionData.previous){
-							$scope.missionResult = 'Team ' + missionResult.text + ' won ' + missionData.previous.name + ' mission!!!';
-						}
-						var message = reply[0];
-						$scope.messageHeader = message.header;
-						$scope.messageText = message.text;
+						reply.forEach(function(message){
+							if(message.result){
+								if(missionData.previous){
+									$scope.missionResult = 'Team ' + message.text + ' won ' + missionData.previous.name + ' mission!!!';
+								}
+							} else {
+								$scope.messageHeader = message.header;
+								$scope.messageText = message.text;
+							}
+						});
 					});
 				}
 			});

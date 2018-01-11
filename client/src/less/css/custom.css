@@ -127,3 +127,7 @@ body {
     color: white;
     font-size: 30px;
 }
+
+.brief-message {
+	padding-top: 100px;
+}
